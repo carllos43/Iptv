@@ -1,0 +1,226 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Estilo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #8B4513, #D2691E, #CD853F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 2rem;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-content {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #CD853F, #F4A460);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .barbershop-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 3px solid #8B4513;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #8B4513, #D2691E);
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(139, 69, 19, 0.6);
+            background: linear-gradient(45deg, #D2691E, #8B4513);
+        }
+        
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+        
+        .services {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #CD853F, #F4A460);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #F4A460;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">BARBEARIA ESTILO</div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Estilo e Tradição em Cada Corte</h1>
+            <p>Experimente o melhor em cuidados masculinos com nossa equipe de mestres barbeiros. Qualidade, estilo e tradição que fazem a diferença.</p>
+            <button class="cta-button" onclick="comprarAqui()">Compra Aqui</button>
+        </div>
+        <div class="hero-image">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhISExIVFRUVFxUXFRcVGBcVFxcVFxUXFxcXFxcYHSggGBolHRcVITEhJSktLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGy0lHSUtLS0tLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAMEBgcBAgj/xABJEAABAwIDBAcFBAgDBgcBAAABAAIRAyEEEjEFQVFhBhMicYGRoQexwdHwFDJSchUjYoKSssLhQmNzJCVDU7PxM2SDk6Kj0hb/xAAaAQACAwEBAAAAAAAAAAAAAAAAAQIDBAUG/8QAJhEAAgICAgAGAwEBAAAAAAAAAAECEQMhEjEEEyIyQVEFYXGBUv/aAAwDAQACEQMRAD8AxVJJJAjiS6kgYl2VxcQB6lemPTa9M1QBOotJUgF9gATyHzUOlUurNgWSWxvUJOicI8iBhalSmW1Mn3SDDhmEi4zDeOS3Loj0ro41jYhtZrR1jNN0Es4ttu0VXwuy6f2eqXi+W028RzVP684WvTxVO3VuBe0WlmjhbkmDhXRvFTUFYX0ywHUY+s0WbnL2j9l3yB9FuTjLQ4aEAjuMH4rOva5s4EUcQBp2HRwMx8fRJiH9h1uu2cWzJoP9Nfc538Kgwo/swxUvqUHERVpuEftMt7i5TX0yCQdQYPeLLqfjZ3Bx+jF4uO1IahchOQuQukZDxCS9wlCAG4XIThC5CAG4ShOELkIAbhJOQkgDGkkkl5w6okkkkAJJJJACXqLfWi4pmKDSyk5sWGV435tZjh/ZIY0zskEhGcNtl1EsJp8HA3uNJvrofJeNnU6VQZXjXRw1HcUTxnRzDhrAx78xNx2b89FBtfJbGMu0HcP0ybUp5XADdyQ3FlpkzLSDPcQofSPowKLaPUZnOcwF41JcS77scosofRzA1K9anhmOIdVcG3uG/iMb4AJ8EIk5OOmj6D6JVHVNn4V7zLjRZJ49kfJQelOyPtOGrM35CWcyO1Hjl9FZ8Jhm06VOkwQ2m0MaOTQAPRM023QQMC6HY3qcTSeTYOBd3E5H+i0DpBhsld/B0OHjr6yqF0owH2XaFWnENzy38j7jylvkr/j8R1tHC1d7qcO/M0wfWVs8BLjmr7M3iVeP+AyEoTmVLKu4c4bhchO5VzKgQ1CUJ3KuZUANQlCcypZUANwuJzKuoCjEkkoSXmzrCSSSQAkkkkAeguL01eSkMnbPqwQi9bF1usa7C3hsEDK4kyZ7Jvw0VepG4hFtn7RogubXw7agdo5ssewzq1zd/fI4gpNE4v4DmG6Q1arg2rThzGi8ZYDbQWwFZ/Z1hG1cc2pl/wDBDqkgXLj2WgnvdPPKqO7ENzTSc/IZhtQhzh+8AJHgts9luwHYbDOfVEVK+V5B1awfcaZ33Jj9qNyhRZydUXCm8Xnf/ZeajYcDxsuNEOAOmngnqrdY8PemQMt9tGyr0MSBrNJ59W+Nz5KB0axfWYUNP/DeY7qgmP4mO81pfSnZTcXhKlN28BwI1BYZt3iR4rO9m7JZQnIXX1kyNZ4a6+a2eCxSlkU10jP4maUafySsq5CdypZV2zmDWVLKnISyoAaypQnIShADWVLKnSFzKgBrKkncqSYGEpJLtNhJAGpsF5o6wmMJIABJOgCN4LopiKgmGt7zf0CIbJwTacRc/wCJ3E8ByV82NiaYADlTPI7pGrHhVXIoL+gGKy5h1ZG+5keEKL//AB2JmIZ/Efi1bPSayZbYJvEZTbID9cUucifkwMkxHQ6tTo1KryOw0ugXmNb+arK3LFUA6WXnyzx7pGD8Mcu0fowMkxHQ6dLohUoU6tWrI+zuqWmzXNa6Gkb5MjwKzqq65W1dI9oNY19N5gVab2A8MzY9CViVZuq6H4fK5OU30zL41KMUo/JGclchOlchdU54yHYSXYSQIbhJchJAhuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkgBuEuQkg......" alt="Barbearia Estilo" class="barbershop-img">
+        </div>
+    </section>
+    
+    <section class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Corte Clássico</h3>
+                <p>Tradição e estilo com técnicas passadas de geração em geração.</p>
+            </div>
+            <div class="service-card">
+                <h3>Barba Completa</h3>
+                <p>Modelagem, hidratação e acabamento perfeito para sua barba.</p>
+            </div>
+            <div class="service-card">
+                <h3>Sobrancelha</h3>
+                <p>Design profissional para um olhar mais marcante.</p>
+            </div>
+            <div class="service-card">
+                <h3>Hidratação Capilar</h3>
+                <p>Tratamentos especializados para cabelos masculinos.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Barbearia Estilo. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script>
+        function comprarAqui() {
+            // Aqui você pode redirecionar para o link desejado
+            // Por enquanto, vamos mostrar um alerta como exemplo
+            alert('Redirecionando para a compra...');
+            // window.location.href = 'seu-link-aqui';
+        }
+    </script>
+</body>
+</html>
+```
